@@ -74,13 +74,14 @@ img {
 .header-section {
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  align-items: center;
   margin: auto;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
+  padding: 24px 0 24px;
 }
 
 .logo {
@@ -93,7 +94,6 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   margin-right: 76px;
-  padding: 24px 0 24px;
 }
 
 .brand-logo {
@@ -104,6 +104,7 @@ img {
   display: flex;
   gap: 40px;
   list-style-type: none;
+  margin: 0;
 }
 
 .header-link {
@@ -126,6 +127,7 @@ img {
   align-items: center;
   gap: 40px;
   list-style-type: none;
+  margin: 0;
 }
 
 .address {

@@ -4,6 +4,10 @@ body {
   background-color: white;
 }
 
+img {
+  display: block;
+}
+
 .container {
   max-width: 1158px;
   padding-left: 15px;
@@ -12,11 +16,16 @@ body {
 }
 
 .visually-hidden {
+  position: absolute;
   width: 1px;
-  left: -10000px;
-  top: auto;
   height: 1px;
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+  border: 0;
 }
 
 .first-title {
@@ -37,7 +46,8 @@ body {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
 }
 
 .main-text {
@@ -52,12 +62,14 @@ body {
 .text-section {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 0;
-  margin: 32px 16px;
+  padding: 32px 0 32px;
 }
 
 /* header */
+
+.header-container {
+  border-bottom: 1px solid #e7e9fc;
+}
 
 .header-section {
   display: flex;
@@ -81,6 +93,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   margin-right: 76px;
+  padding: 24px 0 24px;
 }
 
 .brand-logo {
@@ -151,6 +164,7 @@ body {
   letter-spacing: 0.02em;
   text-align: center;
   list-style-type: none;
+  max-width: 496px;
   margin: 0 0 48px 0;
 }
 
@@ -165,6 +179,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
+  min-width: 169px;
   border: none;
   border-radius: 4px;
   padding: 16px 32px;
@@ -193,8 +208,12 @@ body {
 
 .advantages-items {
   width: calc((100% - 72px) / 4);
-  margin: 0;
+  margin-right: 24px;
   padding-left: 0;
+}
+
+.advantages-items:last-child {
+  margin-right: 0;
 }
 
 /* team-section */
@@ -221,6 +240,11 @@ body {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  margin-right: 24px;
+}
+
+.team-card:last-child {
+  margin-right: 0;
 }
 
 /* portfolio-section */
@@ -237,6 +261,8 @@ body {
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-card {
@@ -244,7 +270,11 @@ body {
   color: rgba(244, 244, 253, 1);
   width: calc((100% - 48px) / 3);
   border: solid 1px rgba(231, 233, 252, 1);
-  margin-bottom: 48px;
+}
+
+.portfolio-text {
+  border: 1px solid #e7e9fc;
+  padding: 32px 16px;
 }
 
 /* footer */
@@ -258,6 +288,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
+  margin-bottom: 16px;
 }
 
 .brand-logo-footer {
@@ -275,5 +306,9 @@ body {
 
 .footer-section {
   background-color: rgba(46, 47, 66, 1);
-  padding: 100px 156px;
+}
+
+.footer-info {
+  display: inline-block;
+  padding: 100px 0 100px;
 }

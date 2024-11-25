@@ -114,6 +114,7 @@ img {
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
+  padding: 24px 0 24px;
 }
 
 .header-link:hover,
